@@ -1,0 +1,61 @@
+#DAY 2 Python IDC 30 Days CHALLENGE.
+
+#Topics- Integers, floats, strings, booleans, type conversion
+
+#Challenge - Calculate the area of a rectangle using user-input length and width.
+
+#CODE-
+
+#Take user input for length
+#length = float(input('Enter the length of rectangle:'))
+
+#Take user input for breadth
+#breadth = float(input('Enter the breadth of rectangle:'))
+
+#calculate the area of rectangle
+#AOR = length*breadth
+
+#Results
+#print(f"The length of rectangle is {length} unit.")
+#print(f"The breadth of rectangle is {breadth} unit.")
+#print(f"The area of rectangle is {AOR} units sq.")
+
+
+
+
+
+
+
+
+
+#Similarly we an find areas of other shapes also like:
+
+#Area of circle
+
+#Taking user input for radius of circle
+
+radius=float(input('Enter Radius of the circle:  '))
+pi=3.14
+
+#area of the circle
+AOC=pi*radius**2
+
+
+#Results
+print(f"The radius of circle is {radius} unit.")
+print(f"The area of circle is {AOC} units sq.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
