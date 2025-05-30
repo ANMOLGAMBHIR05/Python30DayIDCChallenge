@@ -1,0 +1,43 @@
+# #DAY 2 Python IDC 30 Days CHALLENGE.
+#Topics-Lists (slicing, methods), tuples (immutability), dictionaries (key-value pairs), Sets.
+# Challenge-Create an inventory system tracking items and quantities with a dictionary
+# Basic inventory system using dictionaries, tuples, and lists
+
+# Dictionary to store item name as key and a tuple (quantity, price) as value
+inventory = {
+    "Apples": (50, 1.20),
+    "Bananas": (30, 0.80),
+    "Carrots": (40, 0.50)
+}
+
+# Function to display current inventory
+def display_inventory():
+    print("\n--- Current Inventory ---")
+    for item, (qty, price) in inventory.items():
+        print(f"{item}: Quantity = {qty}, Price = ₹{price:.2f}")
+
+# Function to add a new item or update existing item
+def add_or_update_item(item_name, quantity, price):
+    inventory[item_name] = (quantity, price)
+    print(f"{item_name} added/updated with Quantity = {quantity}, Price = ₹{price:.2f}")
+
+# Function to remove an item from inventory
+def remove_item(item_name):
+    if item_name in inventory:
+        del inventory[item_name]
+        print(f"{item_name} removed from inventory.")
+    else:
+        print(f"{item_name} not found in inventory.")
+
+# Function to get list of all unique item names using a set
+def list_all_items():
+    items_set = set(inventory.keys())  # set of item names
+    print("\nAvailable Items:")
+    print(", ".join(items_set))
+
+# Using functions
+display_inventory()
+add_or_update_item("Grapes", 20, 1.50)
+remove_item("Bananas")
+list_all_items()
+display_inventory()
