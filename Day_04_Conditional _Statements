@@ -1,0 +1,27 @@
+#DAY 04 Python IDC 30 Days CHALLENGE.
+
+#Topics-If-else, for/while loops, break/continue
+
+#Challenge-Check if a user-entered number is prime
+
+# Get input from user
+num = int(input("Enter a number: "))
+
+# Prime numbers are greater than 1
+if num <= 1:
+    print("Not a prime number")
+else:
+    # Check for divisors
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            # Found a divisor; so it's not a prime
+            print(num, "is not a prime number")
+            break
+    else:
+        # This else belongs to the for loop, not the if
+        # It executes only if the loop didn't break (i.e., no factors found)
+        print(num, "is a prime number")
+
+
+
+
