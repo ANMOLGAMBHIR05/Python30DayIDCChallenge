@@ -1,0 +1,29 @@
+#DAY 05 Python IDC 30 Days CHALLENGE.
+
+#Topics-Defining functions, parameters, return values, lambda functions.
+
+# Challenge-Write a function that computes the sum and average of a list of numbers
+
+# Define a function to calculate sum and average
+def calculate_sum_and_average(numbers):
+    # Calculate the total sum
+    total = sum(numbers)
+    
+    # Calculate the average
+    average = total / len(numbers)
+    
+    # Return both values
+    return total, average
+
+# Take user input as space-separated numbers
+user_input = input("Enter numbers separated by spaces: ")
+
+# Convert the input into a list of float numbers
+num_list = [float(num) for num in user_input.split()]
+
+# Call the function and store the result
+total, avg = calculate_sum_and_average(num_list)
+
+# Print the results
+print("Sum:", total)
+print("Average:", avg)
