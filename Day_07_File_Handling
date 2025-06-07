@@ -1,0 +1,33 @@
+#DAY 07 Python IDC 30 Days CHALLENGE.
+
+#Topics-Reading/writing files, handling text and CSV
+
+# Challenge-Count word frequencies in a text file
+
+from collections import Counter  # Import Counter to easily count items in a list
+
+# Function to count how many times each word appears in a file
+def count_word_frequencies(file_path):
+    try:
+        # Open the file in read mode
+        with open(file_path, 'r', encoding='utf-8') as file:
+            text = file.read().lower()  # Read the whole text and convert it to lowercase
+            words = text.split()  # Split the text into individual words
+            word_counts = Counter(words)  # Count how often each word appears
+            return word_counts  # Return the dictionary of word counts
+
+    # If the file is not found, show an error message
+    except FileNotFoundError:
+        print(f"Error: File '{file_path}' not found.")
+        return {}
+
+# ----- Example usage -----
+
+file_path = 'C:/Users/Lenovo/Downloads/sample.txt'  # Name of the file you want to analyze
+
+# Call the function and store the result in a variable
+frequencies = count_word_frequencies(file_path)
+
+# Print each word and how many times it appears
+for word, count in frequencies.items():
+    print(f"{word}: {count}")
