@@ -1,0 +1,29 @@
+#DAY 08 Python IDC 30 Days CHALLENGE.
+
+#Topics-Classes, objects, methods, attributes
+
+# Challenge-Create a Car class with attributes and a display method
+
+# Define a Car class
+class Car:
+    # Constructor method to initialize the object's attributes
+    def __init__(self, brand, model, year):
+        self.brand = brand        # Car brand (e.g., Toyota)
+        self.model = model        # Car model (e.g., Corolla)
+        self.year = year          # Manufacturing year (e.g., 2022)
+
+    # Method to display car details
+    def display_details(self):
+        print("Car Details:")
+        print(f"Brand: {self.brand}")
+        print(f"Model: {self.model}")
+        print(f"Year: {self.year}")
+
+# ---- Example usage ----
+
+# Create an object (instance) of the Car class
+my_car = Car("Maruti Suzuki", "Wagon R", 2015)
+
+# Call the method to display details
+my_car.display_details()
+
