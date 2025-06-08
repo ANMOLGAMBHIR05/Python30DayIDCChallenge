@@ -1,0 +1,42 @@
+#DAY 09 Python IDC 30 Days CHALLENGE.
+
+#Topics-Inheritance, polymorphism
+
+#Challenge-Challenge - Extend Car into an ElectricCar subclass with battery capacity.
+
+# Base class: Car
+class Car:
+    def __init__(self, brand, model, year):
+        self.brand = brand        # Brand of the car (e.g., Tesla)
+        self.model = model        # Model of the car (e.g., Model 3)
+        self.year = year          # Manufacturing year
+
+    def display(self):
+        # Display basic car information
+        print(f"Car: {self.year} {self.brand} {self.model}")
+
+
+# Subclass: ElectricCar inherits from Car
+class ElectricCar(Car):
+    def __init__(self, brand, model, year, battery_capacity):
+        super().__init__(brand, model, year)  # Inherit attributes from Car
+        self.battery_capacity = battery_capacity  # Additional attribute
+
+    # Polymorphism: This display method overrides Car's version
+    def display(self):
+        print(f"Electric Car: {self.year} {self.brand} {self.model}")
+        print(f"Battery Capacity: {self.battery_capacity} kWh")
+
+
+# --------- Example usage ---------
+
+# Creating a normal car
+car1 = Car("Toyota", "Corolla", 2020)
+car1.display()  # Calls Car's display method
+
+print()
+
+# Creating an electric car
+electric_car1 = ElectricCar("Tesla", "Model 3", 2023, 75)
+electric_car1.display()  # Calls overridden display method in ElectricCar
+
