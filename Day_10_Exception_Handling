@@ -1,0 +1,33 @@
+#DAY 10 Python IDC 30 Days CHALLENGE.
+
+#Topics-Try-except, specific exceptions, finally clause
+
+#Challenge-Read numbers from a file and handle errors gracefully
+
+def read_numbers_from_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            numbers = []
+            for line in file:
+                try:
+                    number = int(line.strip())
+                    numbers.append(number)
+                except ValueError:
+                    print(f"⚠️ Skipping invalid line: {line.strip()}")
+            return numbers
+
+    except FileNotFoundError:
+        print(f"❌ Error: File '{filename}' not found.")
+        return []
+
+    except IOError:
+        print(f"❌ Error: There was a problem reading the file.")
+        return []
+
+    finally:
+        print("📁 File processing completed.")
+
+# 🔄 Replace 'YourName' with your actual username
+file_path = r"C:\Users\Lenovo\Downloads\numbers.txt"
+result = read_numbers_from_file(file_path)
+print("✅ Numbers read from file:", result)
