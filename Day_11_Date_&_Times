@@ -1,0 +1,27 @@
+#DAY 11 Python IDC 30 Days CHALLENGE.
+
+#Topics-Datetime module, formatting, time differences
+
+#Challenge-Calculate the days between two dates
+
+from datetime import datetime
+
+# Step 1: Ask user to input two dates
+date_str1 = input("Enter the first date (YYYY-MM-DD): ")
+date_str2 = input("Enter the second date (YYYY-MM-DD): ")
+
+# Step 2: Convert the string input into datetime objects
+date_format = "%Y-%m-%d"  # This tells Python how the input is formatted
+try:
+    date1 = datetime.strptime(date_str1, date_format)
+    date2 = datetime.strptime(date_str2, date_format)
+
+    # Step 3: Calculate the difference
+    difference = abs(date2 - date1)  # abs() to always get a positive number
+
+    # Step 4: Show the result
+    print(f"\n📅 Number of days between {date_str1} and {date_str2} is: {difference.days} days")
+
+except ValueError:
+    print("\n❌ Invalid date format! Please enter the date in YYYY-MM-DD format.")
+
