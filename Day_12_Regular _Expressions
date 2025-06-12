@@ -1,0 +1,19 @@
+#DAY 12 Python IDC 30 Days CHALLENGE.
+
+#Topics-re module, pattern matching
+
+#Challenge-Validate gmail addresses using regex
+
+import re
+
+# Ask user to enter email
+email = input("Enter your email address: ")
+
+# Regex pattern to match valid Gmail addresses
+pattern = r'^[a-zA-Z0-9._%+-]+@gmail\.com$'
+
+# Check if pattern matches
+if re.match(pattern, email):
+    print("✅ Valid Gmail address")
+else:
+    print("❌ Invalid Gmail address")
